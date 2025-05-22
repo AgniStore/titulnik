@@ -12,12 +12,6 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
-        .form-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
         .form-group {
             margin-bottom: 15px;
         }
@@ -45,34 +39,54 @@
         button:hover {
             background-color: #45a049;
         }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
-    <div class="form-container">
+    <div class="container">
         <h1>Заполнение титульного листа</h1>
-        <form action="/process" method="POST">
+        <form id="uploadForm">
             <div class="form-group">
-                <label for="НА ТЕМУ:">Тема работы:</label>
-                <input type="text" id="НА ТЕМУ:" name="НА ТЕМУ:" required>
+                <label for="topic">НА ТЕМУ:</label>
+                <input type="text" id="topic" name="topic" required>
             </div>
             <div class="form-group">
-                <label for="СПЕЦИАЛЬНОСТЬ">Специальность:</label>
-                <input type="text" id="СПЕЦИАЛЬНОСТЬ" name="СПЕЦИАЛЬНОСТЬ" required>
+                <label for="specialty">СПЕЦИАЛЬНОСТЬ:</label>
+                <input type="text" id="specialty" name="specialty" required>
             </div>
             <div class="form-group">
-                <label for="АВТОР ДИПЛОМНОЙ РАБОТЫ">Автор дипломной работы:</label>
-                <input type="text" id="АВТОР ДИПЛОМНОЙ РАБОТЫ" name="АВТОР ДИПЛОМНОЙ РАБОТЫ" required>
+                <label for="student">ВЫПОЛНИЛ:</label>
+                <input type="text" id="student" name="student" required>
             </div>
             <div class="form-group">
-                <label for="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ">Руководитель дипломной работы:</label>
-                <input type="text" id="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ" name="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ" required>
+                <label for="group">ГРУППА:</label>
+                <input type="text" id="group" name="group" required>
             </div>
             <div class="form-group">
-                <label for="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ">Консультант по нормоконтролю:</label>
-                <input type="text" id="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ" name="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ" required>
+                <label for="supervisor">РУКОВОДИТЕЛЬ:</label>
+                <input type="text" id="supervisor" name="supervisor" required>
+            </div>
+            <div class="form-group">
+                <label for="position">ДОЛЖНОСТЬ:</label>
+                <input type="text" id="position" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="year">ГОД:</label>
+                <input type="text" id="year" name="year" required>
             </div>
             <button type="submit">Скачать заполненный документ</button>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html> 
