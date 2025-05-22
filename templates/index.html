@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заполнение титульного листа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Заполнение титульного листа</h1>
+        <form action="/process" method="POST">
+            <div class="form-group">
+                <label for="НА ТЕМУ:">Тема работы:</label>
+                <input type="text" id="НА ТЕМУ:" name="НА ТЕМУ:" required>
+            </div>
+            <div class="form-group">
+                <label for="СПЕЦИАЛЬНОСТЬ">Специальность:</label>
+                <input type="text" id="СПЕЦИАЛЬНОСТЬ" name="СПЕЦИАЛЬНОСТЬ" required>
+            </div>
+            <div class="form-group">
+                <label for="АВТОР ДИПЛОМНОЙ РАБОТЫ">Автор дипломной работы:</label>
+                <input type="text" id="АВТОР ДИПЛОМНОЙ РАБОТЫ" name="АВТОР ДИПЛОМНОЙ РАБОТЫ" required>
+            </div>
+            <div class="form-group">
+                <label for="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ">Руководитель дипломной работы:</label>
+                <input type="text" id="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ" name="РУКОВОДИТЕЛЬ ДИПЛОМНОЙ РАБОТЫ" required>
+            </div>
+            <div class="form-group">
+                <label for="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ">Консультант по нормоконтролю:</label>
+                <input type="text" id="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ" name="КОНСУЛЬТАНТ ПО НОРМОКОНТРОЛЮ" required>
+            </div>
+            <button type="submit">Скачать заполненный документ</button>
+        </form>
+    </div>
+</body>
+</html> 
